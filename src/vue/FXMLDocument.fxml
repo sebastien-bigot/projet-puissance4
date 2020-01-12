@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="357.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.Controleur">
+   <children>
+      <Pane layoutX="-1.0" layoutY="-3.0" prefHeight="360.0" prefWidth="400.0" style="-fx-background-color: #afc2d5;">
+         <children>
+            <Label layoutY="8.0" prefHeight="45.0" prefWidth="400.0" style="-fx-background-color: #717c89; -fx-background-radius: 10;" text="  Puissance 4" textFill="#fdfdff">
+               <font>
+                  <Font size="32.0" />
+               </font>
+               <padding>
+                  <Insets left="100.0" />
+               </padding>
+            </Label>
+            <CheckBox fx:id="suicideCB" layoutX="137.0" layoutY="85.0" mnemonicParsing="false" text="Suicide Mode" />
+            <Label layoutX="140.0" layoutY="111.0" text="Taille de la Grille" />
+            <Slider fx:id="ligneDrag" blockIncrement="1.0" layoutX="229.0" layoutY="148.0" max="12.0" min="6.0" onMouseDragged="#setNbLigneDrag" value="6.0" />
+            <TextField fx:id="ligne" disable="true" layoutX="175.0" layoutY="143.0" prefHeight="25.0" prefWidth="41.0" />
+            <Slider fx:id="colonneDrag" blockIncrement="1.0" layoutX="229.0" layoutY="183.0" max="20.0" min="7.0" onDragDetected="#setNbColonneDrag" onMouseDragged="#setNbColonneDrag" value="7.0" />
+            <TextField fx:id="colonne" disable="true" layoutX="176.0" layoutY="179.0" prefHeight="25.0" prefWidth="41.0" />
+            <Label layoutX="47.0" layoutY="145.0" text="Nombre de ligne :" />
+            <Label layoutX="30.0" layoutY="182.0" text="Nombre de colonne :" />
+            <TextField fx:id="pion" disable="true" layoutX="175.0" layoutY="211.0" prefHeight="25.0" prefWidth="41.0" />
+            <Slider fx:id="pionDrag" blockIncrement="1.0" layoutX="229.0" layoutY="216.0" max="7.0" min="3.0" onMouseDragged="#setNbPionDrag" value="4.0" />
+            <Label layoutX="43.0" layoutY="214.0" text="Pion pour gagner :" />
+            <ColorPicker fx:id="j1CP" layoutX="20.0" layoutY="277.0" onAction="#setColorJ1">
+                <value>
+                    <Color blue="0.0" green="0.0" red="1.0" />
+                </value> 
+            </ColorPicker>
+            <ColorPicker fx:id="j2CP" layoutX="200.0" layoutY="276.0" onAction="#setColorJ2">
+                <value>
+                    <Color blue="0.0" green="1.0" red="1.0" />
+                </value> 
+            </ColorPicker>
+            <Label layoutX="65.0" layoutY="258.0" text="Couleur J1" />
+            <Label layoutX="236.0" layoutY="259.0" text="Couleur J2" />
+            <Button fx:id="btnLancer" layoutX="70.0" layoutY="321.0" mnemonicParsing="false" onAction="#play" prefHeight="25.0" prefWidth="112.0" text="Lancer" />
+            <Button fx:id="btnMenu" layoutX="210.0" layoutY="321.0" mnemonicParsing="false" onAction="#revenirAuMenu" text="Revenir au menu" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

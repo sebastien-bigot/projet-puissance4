@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #afc2d5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.FXMLAttenteController">
+   <children>
+      <Label fx:id="lblAnimation" layoutX="39.0" layoutY="36.0" text="En attente d'un autre joueur  ..." textFill="#1a3561">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="122.0" text="Recapitulatif de votre partie :" textFill="#1a3561">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="159.0" text="Taille de la grille :" textFill="#1a3561" />
+      <Label layoutX="70.0" layoutY="183.0" text="Mode suicide :" textFill="#1a3561" />
+      <Label layoutX="70.0" layoutY="210.0" text="Nombre de pions pour gagner : " textFill="#1a3561" />
+      <Label fx:id="lblTaille" layoutX="190.0" layoutY="159.0" />
+      <Label fx:id="lblSuicide" layoutX="175.0" layoutY="183.0" />
+      <Label fx:id="lblPion" layoutX="284.0" layoutY="211.0" />
+      <Button fx:id="btnQuitter" layoutX="70.0" layoutY="313.0" mnemonicParsing="false" onAction="#revenirLobby" text="Quitter la partie" textFill="#1a3561" />
+      <Label fx:id="lblPseudo" layoutX="348.0" layoutY="122.0" textFill="#1a3561">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

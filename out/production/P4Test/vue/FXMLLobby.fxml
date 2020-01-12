@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #afc2d5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.FXMLLobbyController">
+   <children>
+      <Label layoutX="17.0" layoutY="36.0" text="Serveurs :" />
+      <Label layoutX="17.0" layoutY="82.0" text="Surnom : " />
+      <Button layoutX="237.0" layoutY="32.0" mnemonicParsing="false" onAction="#refreshServer" text="Rafraichir" />
+      <Button fx:id="btnHost" layoutX="396.0" layoutY="18.0" mnemonicParsing="false" onAction="#hostPartie" prefHeight="37.0" prefWidth="150.0" text="Créer une partie" />
+      <Button fx:id="btnQuickGame" layoutX="395.0" layoutY="66.0" mnemonicParsing="false" onAction="#rejoindreRandom" prefHeight="37.0" prefWidth="150.0" text="Partie rapide" />
+      <TableView fx:id="tablePartie" layoutX="16.0" layoutY="115.0" prefHeight="235.0" prefWidth="562.0" />
+      <Button layoutX="117.0" layoutY="361.0" mnemonicParsing="false" onAction="#refreshPartie" prefHeight="25.0" prefWidth="96.0" text="Rafraichir" />
+      <TextField fx:id="tfPseudo" layoutX="79.0" layoutY="78.0" text="Anonyme" />
+      <ComboBox fx:id="cbServer" layoutX="79.0" layoutY="32.0" onAction="#changeServer" prefWidth="150.0" />
+      <Button fx:id="btnQuitter" layoutX="327.0" layoutY="361.0" mnemonicParsing="false" onAction="#quitter" text="Revenir au menu" />
+   </children>
+</AnchorPane>
